@@ -10,3 +10,4 @@ RUN cp -rvf photogenic/* .
 RUN rm -rf photogenic photogenic.zip
 CMD ["apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80
+
