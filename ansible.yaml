@@ -1,0 +1,16 @@
+- hosts: all
+  tasks:
+
+    - name: stop container
+      shell: docker stop mydocker
+
+    - name: remove container
+      shell: docker rm mydocker
+
+    - name: remove docker image
+      shell: docker rmi a47741753/test:latest
+
+    - name: run container
+      shell: docker run -itd --name mydocker -p 8080:80 a47741753/test:latest
+
+
